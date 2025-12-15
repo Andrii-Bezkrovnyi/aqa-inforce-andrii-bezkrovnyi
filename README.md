@@ -96,14 +96,16 @@ and responsive checks using `playwright`.
   pytest -m api
   ```
 10. Test data can be modified in the [`test_data.json`](./test_data.json) file for different scenarios.
+
+---
+## Test Cases
+- A human-readable list of test scenarios covered by this framework
+can be found in the test-cases.txt file.
 ---
 
 ## Logging and Reports
-The project uses Loguru for logging.
-Console Output: Brief info about test execution.
-File Logs: Detailed debug logs are saved to test_result_{date}.log.
-Test Reports: Pytest generates HTML reports for test results into test_report.html file.
----
-## Test Cases
-A human-readable list of test scenarios covered by this framework
-can be found in the test-cases.txt file.
+- The project uses Loguru for logging.
+- Console Output: Brief info about test execution.
+- File Logs: Detailed debug logs are saved to test_result_{date}.log.
+- Test Reports: Pytest generates HTML reports for test results into test_report.html file.
+
