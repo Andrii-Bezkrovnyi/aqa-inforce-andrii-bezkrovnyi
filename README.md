@@ -29,7 +29,9 @@ and responsive checks using `playwright`.
 
 ```text
 ├── page_object/        # Page Object Model (POM) classes
-│   └── page_object.py  # UI Selectors and page definitions
+│   └── base_page.py    # UI Selectors of common elements
+│   └── booking_page.py # UI Selectors and methods for Booking Page
+│   └── home-page.py    # UI Selectors and methods for Home Page
 ├── tests/              # Test scripts
 │   ├── conftest.py     # Pytest fixtures and hooks
 │   ├── test_admin_api.py # API tests for Admin functionality
@@ -37,8 +39,11 @@ and responsive checks using `playwright`.
 ├── utils/              # Utility helper classes
 │   ├── test_data.py    # Test data constants
 │   ├── utils_api.py    # API wrapper methods
-│   └── utils_ui.py     # UI helper methods
+│   └── constants_ui.py # Constants for UI tests
 ├── test_data.json      # Externalized test data
+├── .flake8             # Flake8 configuration for code style
+├── .gitignore          # Git ignore file
+├── README.md           # Project documentation
 ├── pytest.ini          # Pytest configuration and markers
 └── requirements.txt    # Project dependencies
 ```
