@@ -14,7 +14,7 @@ from utils.test_data import (
     invalid_booking_data,
     room_data
 )
-from utils.utils_ui import UIConstants
+from utils.constants_ui import UIConstants
 from loguru import logger
 
 ua = fake_useragent.UserAgent()
