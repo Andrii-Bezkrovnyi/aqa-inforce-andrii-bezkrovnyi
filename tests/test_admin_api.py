@@ -13,7 +13,7 @@ class TestAdminAPI:
         api_base = utils.room_api_base
         room_data = utils.test_data["room_data"]
         # Create room (Admin API)
-        response = utils.create_room(api_base, room_data, admin_headers)
+        utils.create_room(api_base, room_data, admin_headers)
         # Check the room is created successfully
         rooms = utils.get_available_rooms()
         matching_room = next(
@@ -59,7 +59,6 @@ class TestAdminAPI:
 
     def test_edit_room(self, utils, admin_headers):
         """Test: Edit Room (Admin API) and check changes (User API)"""
-        api_base = utils.room_api_base
         updated_data = utils.test_data["room_data"].copy()
         updated_data["roomName"] = "Updated Room Name"
         updated_data["roomPrice"] = 999

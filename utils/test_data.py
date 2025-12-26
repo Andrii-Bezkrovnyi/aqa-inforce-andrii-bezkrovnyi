@@ -18,7 +18,7 @@ invalid_booking_data = {
     "lastname": "",
     "email": "non-an-email",
     "phone": "qwety"
-  }
+}
 
 room_data = {
     "roomName": "Test Room",
