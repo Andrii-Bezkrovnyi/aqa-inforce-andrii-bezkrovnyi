@@ -4,8 +4,8 @@ Preconditions:
 - The home page of https://automationintesting.online/ is opened
 - The room is available for the selected date
 Steps:
-1. Click the "Our Rooms" link in the header
-2. Click "Reserve now" for opening the booking form.
+1. Click the "Rooms" link in the header
+2. Click "Book now" for opening the booking form.
 3. Select the room type in the booking form.
 4. Select a valid date range (e.g., 2026-12-12 to 2026-12-16)
 5. Enter the valid data into the booking form:
@@ -20,14 +20,14 @@ Expected Result:
 ---
 
 # UI Test Case 2
-Summary: The error is displayed after entering the valid data in the booking form.
+Summary: The error is displayed after entering the invalid data in the booking form.
 Preconditions:
 - User is on the home page of https://automationintesting.online/
-- User has selected a room type and clicked "Book now" to open the booking form
+- The room is available for the selected date
 Steps:
-1. Click the "Our Rooms" link in the header
-2. Click "Reserve now" for opening the booking form.
-3. Select the room type in the booking form.
+1. Click the "Rooms" link in the header
+2. Select the room type on the "Our Rooms" part of site.
+3. Click "Book now" for opening the booking form.
 4. Select a valid date range (e.g., 2026-12-12 to 2026-12-16)
 5. Enter the invalid data into the booking form:
    - First Name: (leave empty)
@@ -36,7 +36,7 @@ Steps:
    - Phone: qwety
 6. Click on 'Reserve now'
 Expected Result:
-- The validation errors is displayed after entering the valid data in the booking form.
+- The validation errors is displayed after entering the invalid data in the booking form.
 
 ---
 
@@ -46,15 +46,15 @@ Preconditions:
 - User is on the home page of https://automationintesting.online/
 - A room has already been booked for specific dates (e.g., 2026-12-12 to 2026-12-16)
 Steps:
-1. Click the "Our Rooms" link in the header
-2. Click "Reserve now" for opening the booking form.
-3. Select the room type in the booking form.
+1. Click the "Rooms" link in the header
+2. Select the room type on the "Our Rooms" part of site.
+3. Click "Book now" for opening the booking form.
 4. Select a previously booked dates (e.g., 2026-12-12 to 2026-12-16) on the reservation page.
-5. Enter the invalid data into the booking form:
-   - First Name: (leave empty)
-   - Last Name: (leave empty)
-   - Email: not-an-email
-   - Phone: qwety
+5. Enter the valid data into the booking form:
+   - First Name: Andrii
+   - Last Name: Test
+   - Email: andrii@example.com
+   - Phone: 09718618291
 6. Click on 'Reserve now'
 Expected Result:
 - The error "Failed to create booking" booking via previously booked dates on the reservation page.
